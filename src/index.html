@@ -7,11 +7,12 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="bg-blue-50">
-  <header class="bg-blue-600 text-white flex justify-between items-center px-6  py-3 rounded-lg">
+  <header class="bg-blue-600 text-white flex justify-between items-center px-6  py-3 rounded-lg fixed top-0 w-full z-50">
     <h1 class="text-lg font-bold">Code Academy</h1>
     <ul class="hidden md:block md:flex md:gap-8 font-semibold">
       <li><a href="#home" class="hover:text-blue-300">Home</a></li>
       <li><a href="#courses" class="hover:text-blue-300">Courses</a></li>
+      <li><a href="#test" class="hover:text-blue-300">Testimonials</a></li>
       <li><a href="#about" class="hover:text-blue-300">About</a></li>
     </ul>
     <div class="flex flex-col gap-1  md:hidden">
@@ -21,23 +22,23 @@
     </div>
   </header>
   <main>
-    <section id="home" class="h-58 w-ful bg-[url(./background.jpg)] bg-cover bg-center bg-no-repeat flex flex-col justify-center content-center items-center md:h-74">
+    <section id="home" class="h-70 w-ful bg-[url(./background.jpg)] bg-cover bg-center bg-no-repeat flex flex-col justify-center content-center items-center pt-10 md:h-64">
       <h1 class="text-[30px] mx-12 my-1  font-bold text-center">Learn Web Development</h1>
       <p class="text-center mx-12 my-2">Build your skills in HTML, CSS, JavaScript and Tailwind CSS.</p>
-      <button class="px-6 py-1.5 bg-blue-600 text-white rounded-md m-2 flex items-center hover:bg-blue-700">Explore Courses <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ml-3" viewBox="0 0 16 16">
+      <button class="px-6 py-1.5 bg-blue-600 text-white rounded-md m-2 flex items-center hover:bg-blue-700 focus:ring-2 focus:ring-blue-500">Explore Courses <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ml-3" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
 </svg></button>
     </section>
     <section id="courses" class="flex flex-col items-center
-    justify-center p-2 bg-blue-50 my-2">
+    justify-center p-2 bg-blue-50 my-6 gap-6">
       <h2 class="font-bold text-[25px]">Our Courses</h2>
-      <div class="md:flex flex-wrap justify-center">
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-3 justify-center">
         <article class="bg-white p-5 flex gap-3 rounded-lg shadow m-3 md:flex-col items-start md:p-6">
           <img src="./html-icon.svg" alt="html-icon" class="h-8 ml-3">
           <div class="flex flex-col items-start mr-8 ml-2">
             <h3 class="font-extrabold text-lg">HTML</h3>
             <p class="my-2">Learn the structure of web page.</p>
-            <button class="bg-blue-600 px-6 py-1.5 text-white font-bold rounded-md flex items-center ml-1 hover:bg-blue-700">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ml-3" viewBox="0 0 16 16">
+            <button class="bg-blue-600 px-6 py-1.5 text-white font-bold rounded-md flex items-center ml-1 hover:bg-blue-700 focus:ring-2 focus:ring-blue-500">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ml-3" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
 </svg></button>
           </div>
@@ -47,7 +48,7 @@
           <div class="flex flex-col items-start mr-8 ml-2">
             <h3 class="font-extrabold text-lg">CSS</h3>
             <p class="my-2">Learn how to style websites.</p>
-            <button class="bg-blue-600 px-6 py-1.5 text-white font-bold rounded-md flex items-center ml-1 hover:bg-blue-700">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ml-3" viewBox="0 0 16 16">
+            <button class="bg-blue-600 px-6 py-1.5 text-white font-bold rounded-md flex items-center ml-1 hover:bg-blue-700 focus:ring-2 focus:ring-blue-500">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ml-3" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
 </svg></button>
           </div>
@@ -57,7 +58,7 @@
           <div class="flex flex-col items-start mr-8 ml-2">
             <h3 class="font-extrabold text-lg">JavaScript</h3>
             <p class="my-2">Make websites interactive.</p>
-            <button class="bg-blue-600 px-6 py-1.5 text-white font-bold rounded-md flex items-center ml-1 hover:bg-blue-700">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ml-3" viewBox="0 0 16 16">
+            <button class="bg-blue-600 px-6 py-1.5 text-white font-bold rounded-md flex items-center ml-1 hover:bg-blue-700 focus:ring-2 focus:ring-blue-500">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ml-3" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
 </svg></button>
           </div>
@@ -67,11 +68,39 @@
           <div class="flex flex-col items-start mr-8 ml-1">
             <h3 class="font-extrabold text-lg">Tailwind CSS</h3>
             <p class="my-2">Build modern responsive designs.</p>
-            <button class="bg-blue-600 px-6 py-1.5 text-white font-bold rounded-md flex items-center ml-1 hover:bg-blue-700">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ml-3" viewBox="0 0 16 16">
+            <button class="bg-blue-600 px-6 py-1.5 text-white font-bold rounded-md flex items-center ml-1 hover:bg-blue-700 focus:ring-2 focus:ring-blue-500">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ml-3" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
 </svg></button>
           </div>
         </article>
+      </div>
+    </section>
+    <section id="test" class="flex flex-col items-center
+    justify-center p-2 bg-blue-50 my-6 gap-6">
+      <h2 class="font-bold text-[25px]">Student Testimonials</h2>
+      <div class="grid grid-cols-[max(386px)] gap-6 md:grid-cols-[max(365px)_max(365px)_max(365px)] justify-center">
+        <article class="bg-white p-5 flex gap-3 rounded-lg shadow m-3 md:flex-col items-start md:p-6">
+          <img src="./person-svgrepo-com.svg" alt="html-icon" class="h-10 ml-1">
+          <div class="flex flex-col items-start mr-8 ml-2">
+            <h3 class="font-extrabold text-lg">Student A</h3>
+            <p class="my-2">I learned HTML for one month, and could improve dramatically. I recommend this course!</p>
+          </div>
+        </article>
+        <article class="bg-white p-5 flex gap-3 rounded-lg shadow m-3 md:flex-col items-start md:p-6">
+          <img src="./person-svgrepo-com.svg" alt="html-icon" class="h-10 ml-1">
+          <div class="flex flex-col items-start mr-8 ml-2">
+            <h3 class="font-extrabold text-lg">Student B</h3>
+            <p class="my-2">I learned JavaScript for one month, and could improve significantly. I recommend this course!</p>
+          </div>
+        </article>
+        <article class="bg-white p-5 flex gap-3 rounded-lg shadow m-3 md:flex-col items-start md:p-6">
+          <img src="./person-svgrepo-com.svg" alt="html-icon" class="h-10 ml-1">
+          <div class="flex flex-col items-start mr-8 ml-2">
+            <h3 class="font-extrabold text-lg">Student C</h3>
+            <p class="my-2">I learned Tailwind CSS for one month, and could improve rapidly. I recommend this course!</p>
+          </div>
+        </article>
+        
       </div>
     </section>
   </main>
